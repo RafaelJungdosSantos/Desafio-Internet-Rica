@@ -1,0 +1,108 @@
+<html lang="pt">
+
+	<head>
+	
+		<meta charset="utf-8">
+    
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+		<title>  Cadastro </title>
+   
+		<script type="text/javascript" src="javascript.js"></script>
+		
+		<script src="bootstrap-3.3.6-dist/js/jquery-1.11.3.js"></script>
+		
+		<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+		
+		<link href="bootstrap-3.3.6-dist/css/checkin.css" rel="stylesheet">
+		
+		
+                <style type="text/css">
+                    form{
+                     
+                        
+                    }
+                    table.classe{
+                         border: 1px solid #444;
+                      }
+                      label{
+                          width: 80px;
+                      }    
+                      
+                      
+                      #tamanho-borda{
+                         margin: 0 auto;
+                          width: 560px;
+                          padding-left: 1cm;
+                     padding-right: 1cm;
+                     padding-top: 1cm;
+                         
+                      }
+                      
+                    </style>
+	</head>
+
+        
+    <body >
+        
+	
+	  <div class="container-fluid ">
+	<form name="form" onsubmit="return valida()" class="form-inline" method="post" >
+            <div class="row">
+                <div  style="border: 1px solid black" id='tamanho-borda' >
+            
+		
+			
+			<div><label> Nome: </label>
+			
+			<input class="form-control" type="text" size='42' required="required"  id="nome"/></div>
+			
+			<div><label> Profissão: </label>
+			
+			<input class="form-control" type="text" size='42' required="required"   id="profissao"/></div>
+			
+			<div><label> Telefone: </label>
+                            
+                       <input class="form-control" type='text' required="required" name='tel' id="telefone" size="15" maxlength="15" onkeypress='mascara(this, telMascara)' onblur='clearTimeout()'>
+
+	                       
+			<label> Salário: </label>
+                      
+                        
+                        <input class="form-control" type="text" size='7' required="required" id="salario" onKeyPress='mascara(this, antLetra)' onblur='clearTimeout()'/></div></br>
+			
+			
+                        <center><div ><input type="button" class="btn btn-lg btn-success" name="enviar" id="salvar" onclick="valores()" value="Salvar" >
+                                <input type="button" class="btn btn-lg btn-danger " onclick="limpar()" value="Cancelar"></div></center>
+			
+                        </div>
+		</div>
+		 </form>
+		
+              </div>
+            <table id="tblValores" border='1' align='center' width= "560px" >
+                <thead>
+                <tr>
+                    <td align="center">
+                        <label>Nome</label>
+                    </td>
+                    
+                    <td align="center">
+                        <label>Profissão</label>
+                    </td>
+                    <td align="center">
+                        <label>Telefone</label>
+                    </td>
+                    <td align="center">
+                        <label>Salário</label>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                
+            </table>
+</body>	
+</html>
+
